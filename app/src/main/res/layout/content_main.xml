@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:ignore="MissingConstraints">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/first_divider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2.5dip"
+                    android:background="@color/colorAccent"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_balance"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/first_divider"
+                    android:background="@color/colorAccent"
+                    android:paddingLeft="10.0dip"
+                    android:paddingTop="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:paddingBottom="10.0dip"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:id="@+id/balance_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:id="@+id/wallet_balance_indicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="Transfer money to"
+                            android:textColor="@color/white"
+                            android:textSize="20.0sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_below="@+id/balance_layout"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/home_buttons_margin"
+                        android:layout_marginBottom="@dimen/home_buttons_margin"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/top_up_button"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:descendantFocusability="blocksDescendants"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/lnr_btc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_marginTop="10dp"
+                                    app:srcCompat="@drawable/bitcoin"
+                                    tools:ignore="VectorDrawableCompat" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:paddingTop="@dimen/home_buttons_text_padding"
+                                    android:text="@string/topup_btc"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/transfer_button"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:descendantFocusability="blocksDescendants"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/sacco_button"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1.0"
+                                android:descendantFocusability="blocksDescendants"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:id="@+id/lnr_sacco"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_marginTop="10dp"
+                                        app:srcCompat="@drawable/paypal"
+                                        tools:ignore="VectorDrawableCompat" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:paddingTop="@dimen/home_buttons_text_padding"
+                                        android:text="@string/paypal"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/white" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/balances_button"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:descendantFocusability="blocksDescendants"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/friend_button"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1.0"
+                                android:descendantFocusability="blocksDescendants"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:id="@+id/lnr_friend"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_marginTop="10dp"
+                                        app:srcCompat="@drawable/logovisa"
+                                        tools:ignore="VectorDrawableCompat" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:paddingTop="@dimen/home_buttons_text_padding"
+                                        android:text="@string/visa"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/white" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2.5dip"
+                    android:layout_below="@+id/layout_balance"
+                    android:layout_marginBottom="@dimen/home_buttons_margin"
+                    android:background="@color/colorAccent"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/til_financial_service"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16.0dip"
+                        android:text="@string/tx_history"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="15.0sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/financial_service_recycler_view"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/til_financial_service" />-->
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingEnd="@dimen/dimen_10"
+                    android:paddingRight="@dimen/dimen_10"
+                    android:layout_below="@+id/til_financial_service">
+
+
+                    <RelativeLayout
+                        android:id="@+id/tx_sacco"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="6dip">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/icon"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            android:layout_marginRight="6dp"
+                            app:civ_border_width="0.5dp"
+                            app:civ_border_color="#FF000000"
+                            android:layout_marginEnd="6dp"
+                            android:src="@drawable/bitcoin" />
+
+                        <TextView
+                            android:id="@+id/txt_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/icon"
+                            android:layout_toEndOf="@+id/icon"
+                            android:gravity="center_vertical"
+                            android:text="UGX 50000"
+                            style="@style/Caption"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txt_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/txt_receiver_category"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignWithParentIfMissing="true"
+                            android:gravity="center_vertical"
+                            android:text="TODAY"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/chat_notifs_txt"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/txt_date"
+                            android:layout_marginEnd="32dp"
+                            android:layout_marginRight="32dp"
+                            android:background="@drawable/ic_complete"
+                            android:gravity="center_vertical"
+                            android:textAlignment="center"
+                            android:textColor="#FFF"
+                            android:textSize="10sp" />
+                        <TextView
+                            android:id="@+id/txt_receiver_category"
+                            android:layout_below="@id/txt_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/icon"
+                            android:layout_toEndOf="@+id/icon"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:layout_marginTop="4dp"
+                            android:text="1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:layout_below="@id/icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/dark_gray"
+                            android:layout_toRightOf="@id/icon"
+                            android:layout_toEndOf="@+id/icon" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/tx_bank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="6dip">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/icon2"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            android:layout_marginRight="6dp"
+                            app:civ_border_width="0.5dp"
+                            app:civ_border_color="#FF000000"
+                            android:layout_marginEnd="6dp"
+                            android:src="@drawable/paypal" />
+
+                        <TextView
+                            android:id="@+id/txt_amount2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/icon2"
+                            android:layout_toEndOf="@+id/icon2"
+                            android:gravity="center_vertical"
+                            android:text="UGX 50000"
+                            style="@style/Caption"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txt_date2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/txt_receiver_category2"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignWithParentIfMissing="true"
+                            android:gravity="center_vertical"
+                            android:text="YESTERDAY"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/chat_notifs_txt2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/txt_date2"
+                            android:layout_marginEnd="32dp"
+                            android:layout_marginRight="32dp"
+                            android:background="@drawable/ic_failed"
+                            android:gravity="center_vertical"
+                            android:textAlignment="center"
+                            android:textColor="#FFF"
+                            android:textSize="10sp" />
+                        <TextView
+                            android:id="@+id/txt_receiver_category2"
+                            android:layout_below="@id/txt_amount2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/icon2"
+                            android:layout_toEndOf="@+id/icon2"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:layout_marginTop="4dp"
+                            android:text="xtianm4@gmail.com"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:layout_below="@id/icon2"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/dark_gray"
+                            android:layout_toRightOf="@id/icon2"
+                            android:layout_toEndOf="@+id/icon2" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/tx_friend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="6dip">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/icon3"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            android:layout_marginRight="6dp"
+                            app:civ_border_width="0.5dp"
+                            app:civ_border_color="#FF000000"
+                            android:layout_marginEnd="6dp"
+                            android:src="@drawable/logovisa" />
+
+                        <TextView
+                            android:id="@+id/txt_amount3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/icon3"
+                            android:layout_toEndOf="@+id/icon3"
+                            android:gravity="center_vertical"
+                            android:text="UGX 50000"
+                            style="@style/Caption"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txt_date3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/txt_receiver_category3"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignWithParentIfMissing="true"
+                            android:gravity="center_vertical"
+                            android:text="YESTERDAY"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/chat_notifs_txt3"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/txt_date3"
+                            android:layout_marginEnd="32dp"
+                            android:layout_marginRight="32dp"
+                            android:background="@drawable/ic_complete"
+                            android:gravity="center_vertical"
+                            android:textAlignment="center"
+                            android:textColor="#FFF"
+                            android:textSize="10sp" />
+                        <TextView
+                            android:id="@+id/txt_receiver_category3"
+                            android:layout_below="@id/txt_amount3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/icon3"
+                            android:layout_toEndOf="@+id/icon3"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:layout_marginTop="4dp"
+                            android:text="4860610015285684"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:layout_below="@id/icon3"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/dark_gray"
+                            android:layout_toRightOf="@id/icon3"
+                            android:layout_toEndOf="@+id/icon3" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
