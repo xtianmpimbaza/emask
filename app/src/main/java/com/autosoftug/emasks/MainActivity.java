@@ -48,6 +48,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Intent i = new Intent(MainActivity.this, BitcoinActivity.class);
         startActivity(i);
     }
+    @OnClick(R.id.lnr_visa)
+        void payVisa() {
+            Intent i = new Intent(MainActivity.this, VisaActivity.class);
+            startActivity(i);
+        }
+     @OnClick(R.id.lnr_paypal)
+            void payPayPal() {
+                Intent i = new Intent(MainActivity.this, PaypalActivity.class);
+                startActivity(i);
+            }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

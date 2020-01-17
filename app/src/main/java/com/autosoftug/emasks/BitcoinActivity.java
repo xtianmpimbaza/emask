@@ -15,7 +15,8 @@ public class BitcoinActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bitcoin);
-        Objects.requireNonNull(getSupportActionBar()).setTitle("Pay as bitcoin");
+        this.setTitle("Pay to bitcoin");
+//        Objects.requireNonNull(getSupportActionBar()).setTitle("Pay to Bitcoin");
 
     }
 }

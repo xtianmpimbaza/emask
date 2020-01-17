@@ -118,7 +118,7 @@
                                 android:orientation="vertical">
 
                                 <LinearLayout
-                                    android:id="@+id/lnr_sacco"
+                                    android:id="@+id/lnr_paypal"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
@@ -152,9 +152,9 @@
                             android:orientation="vertical">
 
                             <LinearLayout
-                                android:id="@+id/friend_button"
+                                android:id="@+id/lnr_visa"
                                 android:layout_width="fill_parent"
-                                android:layout_height="fill_parent"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1.0"
                                 android:descendantFocusability="blocksDescendants"
                                 android:orientation="vertical">

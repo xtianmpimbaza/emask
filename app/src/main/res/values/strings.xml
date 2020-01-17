@@ -31,4 +31,6 @@
     <string name="momo_code">MOMO code</string>
     <string name="bitcoin_address">Bitcoin address</string>
     <string name="bitcoin_amount">Bitcoin Amount</string>
+    <string name="paypal_email">Paypal email</string>
+    <string name="account_number">Account number</string>
 </resources>
