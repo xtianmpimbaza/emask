@@ -37,7 +37,7 @@
                     android:inputType="number"
                     android:layout_width="0dp">
                 </EditText>
-
+<!--Scan momo qr code-->
                 <com.github.nikartm.button.FitButton
                     android:id="@+id/btn_scaner"
                     android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
                     android:inputType="number" />
             </LinearLayout>
 
-            <!-- Signup Button -->
+            <!-- Send Button -->
             <com.github.nikartm.button.FitButton
                 android:id="@+id/btn_send"
                 android:layout_width="match_parent"

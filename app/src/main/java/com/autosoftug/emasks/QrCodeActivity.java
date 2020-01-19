@@ -88,11 +88,11 @@ public class QrCodeActivity extends AppCompatActivity implements ActivityCompat.
     @Override
     public void onQRCodeRead(String text, PointF[] points) {
 //        Intent i = new Intent();
-//        i.putExtra("editTextValue", text);
+//        i.putExtra("scanValue", text);
 //        setResult(RESULT_OK, i);
 //        finish();
         Intent returnIntent = new Intent();
-        returnIntent.putExtra("editTextValue",text);
+        returnIntent.putExtra("scanValue",text);
         setResult(Activity.RESULT_OK,returnIntent);
         finish();
     }

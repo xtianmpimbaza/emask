@@ -4,6 +4,7 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -93,22 +94,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            // Handle the camera action
+            // Stay home after click
 
-        } else if (id == R.id.nav_gallery) {
-//            Intent i = new Intent(MainActivity.this, BanksActivity.class);
-//            startActivity(i);
-            Toast.makeText(this, "All transactions", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.nav_send) {
-            Toast.makeText(this, "Use Bank for this demo", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.nav_share) {
-            Toast.makeText(this, "Use Bank for this demo", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.nav_tools) {
-            Toast.makeText(this, "All transactions", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.nav_slideshow) {
-//            Intent i = new Intent(MainActivity.this, ProfileActivity.class);
-//            startActivity(i);
-            Toast.makeText(this, "All transactions", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_payments) {
+            Intent i = new Intent(this, MomoActivity.class);
+            startActivity(i);
+        } else if (id == R.id.nav_call) {
+            Toast.makeText(this, "Initialising a call", Toast.LENGTH_SHORT).show();
+            String posted_by = "256787344529";
+            String uri = "tel:" + posted_by.trim() ;
+            Intent intent = new Intent(Intent.ACTION_DIAL);
+            intent.setData(Uri.parse(uri));
+            startActivity(intent);
         }
 
 

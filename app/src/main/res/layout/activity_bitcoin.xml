@@ -34,7 +34,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:hint="@string/bitcoin_address"
-                    android:inputType="number"
+                    android:inputType="text"
                     android:layout_width="0dp">
                 </EditText>
 
@@ -67,7 +67,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/bitcoin_amount"
-                    android:inputType="number" />
+                    android:inputType="numberDecimal" />
             </LinearLayout>
 
             <!-- Signup Button -->

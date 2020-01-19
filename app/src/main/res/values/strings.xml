@@ -8,11 +8,11 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="menu_tools">Tools</string>
-    <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
+    <string name="payments_methods">All methods</string>
+<!--    <string name="menu_slideshow">Slideshow</string>-->
+<!--    <string name="menu_tools">Tools</string>-->
+<!--    <string name="menu_share">Share</string>-->
+    <string name="menu_send">Call</string>
     <string name="tx_history">History</string>
     <string name="topup_btc">Bitcoin</string>
     <string name="friend">FRIEND</string>
@@ -33,4 +33,5 @@
     <string name="bitcoin_amount">Bitcoin Amount</string>
     <string name="paypal_email">Paypal email</string>
     <string name="account_number">Account number</string>
+    <string name="intro_text">Pay your way with Emask app. Get different payments methods using your Momo account</string>
 </resources>

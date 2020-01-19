@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:padding="10dp"
-            android:text="With emarsk app, You will be able to pay your way. You can get any currency using momopay and make your payments"
+            android:text="@string/intro_text"
             android:textAlignment="center"
             android:textSize="18sp" />
 
