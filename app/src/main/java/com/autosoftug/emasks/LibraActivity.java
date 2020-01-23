@@ -1,15 +1,16 @@
 package com.autosoftug.emasks;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -18,6 +19,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.autosoftug.emasks.Globals.CONFIG;
+import com.autosoftug.emasks.Globals.GlobalFuns;
 import com.autosoftug.emasks.Globals.PrefManager;
 import com.crowdfire.cfalertdialog.CFAlertDialog;
 
@@ -28,24 +30,36 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class PaypalActivity extends AppCompatActivity {
+public class LibraActivity extends AppCompatActivity {
+
     PrefManager prefManager;
     ProgressDialog progressDialog;
+    String payid = "";
+    GlobalFuns globalfun;
 
     @BindView(R.id.input_address)
     EditText inputAddress;
     @BindView(R.id.amount)
     EditText inputAmount;
+
+    @OnClick(R.id.btn_scaner)
+    void goToScan() {
+        Intent i = new Intent(this, QrCodeActivity.class);
+        startActivityForResult(i, 1);
+    }
+
     @OnClick(R.id.btn_send)
     void callSend() {
         this.send();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_paypal);
-        this.setTitle("Pay to Paypal");
+        setContentView(R.layout.activity_bitcoin);
+        this.setTitle("Pay to Libra");
+
         ButterKnife.bind(this);
 
         prefManager = new PrefManager(this);
@@ -53,7 +67,30 @@ public class PaypalActivity extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage("Sending .....");
+
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1) {
+            if (resultCode == Activity.RESULT_OK) {
+                String result = data.getStringExtra("scanValue");
+                fillData(result);
+                Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
+            }
+            if (resultCode == Activity.RESULT_CANCELED) {
+                //Write your code if there's no result
+                Toast.makeText(this, "Canceled", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }//onActivityResult
+
+    void fillData(String strEditText) {
+        inputAddress.setText(strEditText);
+    }
+
 
     void send() {
         RequestQueue queue = Volley.newRequestQueue(this);
@@ -65,10 +102,10 @@ public class PaypalActivity extends AppCompatActivity {
 
         try {
             params.put("phone", "0787344529");
-            params.put("method", "paypal");
+            params.put("method", "libra");
             params.put("receipient", address);
             params.put("amount", amount);
-            params.put("currency", "usd");
+            params.put("currency", "libra");
 
         } catch (JSONException e) {
         }
@@ -100,7 +137,7 @@ public class PaypalActivity extends AppCompatActivity {
         builder.onDismissListener(new DialogInterface.OnDismissListener() {
             @Override
             public void onDismiss(DialogInterface dialog) {
-                Intent i = new Intent(PaypalActivity.this, MainActivity.class);
+                Intent i = new Intent(LibraActivity.this, MainActivity.class);
                 startActivity(i);
             }
         });
@@ -132,5 +169,6 @@ public class PaypalActivity extends AppCompatActivity {
                 });
         builder.show();
     }
+
 
 }

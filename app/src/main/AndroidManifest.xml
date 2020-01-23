@@ -4,12 +4,14 @@
     package="com.autosoftug.emasks">
 
     <dist:module dist:instant="true" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.hardware.camera" />
     <uses-permission android:name="android.hardware.camera.autofocus" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,13 +19,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MomoActivity"></activity>
-        <activity android:name=".BitcoinActivity"></activity>
-        <activity android:name=".VisaActivity"></activity>
-        <activity android:name=".PaypalActivity"></activity>
+        <activity android:name=".HistoryActivity"></activity>
+        <activity android:name=".MomoActivity" />
+        <activity android:name=".BitcoinActivity" />
+        <activity android:name=".VisaActivity" />
+        <activity android:name=".PaypalActivity" />
+        <activity android:name=".LibraActivity" />
+        <activity android:name=".EthereumActivity" />
         <activity
             android:name=".QrCodeActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden"/>
+            android:configChanges="orientation|screenSize|keyboardHidden" />
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
@@ -37,8 +42,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

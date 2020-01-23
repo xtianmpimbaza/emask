@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/dot"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:src="@drawable/momopay" />
+
+    <TextView
+        android:id="@+id/note"
+        style="@style/Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/dot"
+        android:layout_toRightOf="@+id/dot"
+        android:gravity="center_vertical"
+        android:text="UGX 50000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_above="@id/txt_address"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center_vertical"
+        android:text="TODAY"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/timestamp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/ic_complete"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/txt_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/note"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@+id/dot"
+        android:layout_toRightOf="@id/dot"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/dot"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@+id/dot"
+        android:layout_toRightOf="@id/dot"
+        android:background="@color/dark_gray" />
+</RelativeLayout>

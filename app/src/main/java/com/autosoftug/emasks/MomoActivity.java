@@ -120,13 +120,15 @@ public class MomoActivity extends AppCompatActivity {
 
         try {
             params.put("phone", "0787344529");
+            params.put("method", "momo");
+            params.put("receipient", address);
             params.put("amount", amount);
-            params.put("to", address);
+            params.put("currency", "ugx");
 
         } catch (JSONException e) {
         }
 
-        JsonObjectRequest req = new JsonObjectRequest(Request.Method.POST, CONFIG.BASE_URL, params,
+        JsonObjectRequest req = new JsonObjectRequest(Request.Method.POST, CONFIG.SAVE_URL, params,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {

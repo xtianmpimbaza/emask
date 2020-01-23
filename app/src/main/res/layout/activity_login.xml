@@ -10,7 +10,6 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:layout_gravity="center_horizontal"
@@ -25,7 +24,6 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textTitle"
             style="@style/Caption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,13 +34,13 @@
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/txt_acc_no"
+            android:id="@+id/momo_txt_field"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:layout_margin="16dp"
-            android:hint="MTN mobile money number"
+            android:hint="@string/momo_txt_field"
             android:imeOptions="actionDone"
             android:inputType="number"
             android:selectAllOnFocus="true"

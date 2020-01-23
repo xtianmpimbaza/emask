@@ -8,10 +8,15 @@
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home_black_24dp"
             android:title="@string/menu_home" />
+<!--        <item-->
+<!--            android:id="@+id/nav_payments"-->
+<!--            android:icon="@drawable/ic_credit_card_black_24dp"-->
+<!--            android:title="@string/payments_methods" />-->
         <item
-            android:id="@+id/nav_payments"
-            android:icon="@drawable/ic_credit_card_black_24dp"
-            android:title="@string/payments_methods" />
+            android:id="@+id/nav_istory"
+            android:icon="@drawable/ic_list_black_24dp"
+            android:title="@string/history" />
+
     </group>
 
     <item android:title="Communicate">

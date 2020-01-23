@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dip">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/til_financial_service"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/dimen_10"
+        android:paddingRight="@dimen/dimen_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/til_financial_service"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="6dip">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/icon"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginRight="6dp"
+                    android:src="@drawable/bitcoin"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="0.5dp" />
+
+                <TextView
+                    android:id="@+id/txt_amount"
+                    style="@style/Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/icon"
+                    android:layout_toRightOf="@+id/icon"
+                    android:gravity="center_vertical"
+                    android:text="UGX 50000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txt_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignWithParentIfMissing="true"
+                    android:layout_above="@id/txt_receiver_category"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center_vertical"
+                    android:text="TODAY"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/txt_date"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@drawable/ic_complete"
+                    android:gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/txt_receiver_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_amount"
+                    android:layout_marginTop="4dp"
+                    android:layout_toEndOf="@+id/icon"
+                    android:layout_toRightOf="@id/icon"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/icon"
+                    android:layout_marginTop="16dp"
+                    android:layout_toEndOf="@+id/icon"
+                    android:layout_toRightOf="@id/icon"
+                    android:background="@color/dark_gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="6dip">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/icon2"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginRight="6dp"
+                    android:src="@drawable/paypal"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="0.5dp" />
+
+                <TextView
+                    android:id="@+id/txt_amount2"
+                    style="@style/Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/icon2"
+                    android:layout_toRightOf="@+id/icon2"
+                    android:gravity="center_vertical"
+                    android:text="UGX 50000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txt_date2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignWithParentIfMissing="true"
+                    android:layout_above="@id/txt_receiver_category2"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center_vertical"
+                    android:text="YESTERDAY"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/txt_date2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@drawable/ic_failed"
+                    android:gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/txt_receiver_category2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_amount2"
+                    android:layout_marginTop="4dp"
+                    android:layout_toEndOf="@+id/icon2"
+                    android:layout_toRightOf="@id/icon2"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="xtianm4@gmail.com"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/icon2"
+                    android:layout_marginTop="16dp"
+                    android:layout_toEndOf="@+id/icon2"
+                    android:layout_toRightOf="@id/icon2"
+                    android:background="@color/dark_gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="6dip">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/icon3"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginRight="6dp"
+                    android:src="@drawable/logovisa"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="0.5dp" />
+
+                <TextView
+                    android:id="@+id/txt_amount3"
+                    style="@style/Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/icon3"
+                    android:layout_toRightOf="@+id/icon3"
+                    android:gravity="center_vertical"
+                    android:text="UGX 50000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txt_date3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignWithParentIfMissing="true"
+                    android:layout_above="@id/txt_receiver_category3"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center_vertical"
+                    android:text="YESTERDAY"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/txt_date3"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@drawable/ic_complete"
+                    android:gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/txt_receiver_category3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_amount3"
+                    android:layout_marginTop="4dp"
+                    android:layout_toEndOf="@+id/icon3"
+                    android:layout_toRightOf="@id/icon3"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="4860610015285684"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/icon3"
+                    android:layout_marginTop="16dp"
+                    android:layout_toEndOf="@+id/icon3"
+                    android:layout_toRightOf="@id/icon3"
+                    android:background="@color/dark_gray" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

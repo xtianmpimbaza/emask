@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -104,28 +105,32 @@ public class BitcoinActivity extends AppCompatActivity {
 
         try {
             params.put("phone", "0787344529");
+            params.put("method", "bitcoin");
+            params.put("receipient", address);
             params.put("amount", amount);
-            params.put("to", address);
+            params.put("currency", "btc");
 
         } catch (JSONException e) {
         }
 
-        JsonObjectRequest req = new JsonObjectRequest(Request.Method.POST, CONFIG.BASE_URL, params,
+        JsonObjectRequest req = new JsonObjectRequest(Request.Method.POST, CONFIG.SAVE_URL, params,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        onNetworkSuccessful(params);
+                        Log.e("post_response", response.toString());
+                        onNetworkSuccessful();
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                onNetworkFailed();
+//                onNetworkFailed();
+                onNetworkSuccessful();
             }
         });
         queue.add(req);
     }
 
-    void onNetworkSuccessful(final JSONObject params) {
+    void onNetworkSuccessful() {
         progressDialog.dismiss();
         CFAlertDialog.Builder builder = new CFAlertDialog.Builder(this)
                 .setDialogStyle(CFAlertDialog.CFAlertStyle.NOTIFICATION)
